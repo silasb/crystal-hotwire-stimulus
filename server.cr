@@ -53,5 +53,10 @@ get "/stream" do |env|
   render "views/turbo-stream.html.ecr"
 end
 
-at_exit {db.close()}
+get "/emails.html" do
+  sleep 5
+  render "views/emails.ecr"
+end
+
+at_exit { db.close() }
 Kemal.run
