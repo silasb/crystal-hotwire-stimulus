@@ -1,0 +1,9 @@
+<h1>Editing message</h1>
+
+<turbo-frame id="message_<%= id %>">
+  <form action="/messages/<%= id %>" method="post">
+    <input name="message[name]" type="text" value="<%= title %>">
+    <textarea name="message[message]"><%= message %></textarea>
+    <input type="submit">
+  </form>
+</turbo-frame>

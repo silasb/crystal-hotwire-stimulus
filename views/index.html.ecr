@@ -1,0 +1,48 @@
+<turbo-frame id="messages">
+  <div>
+    <% messages.each do |(i, title, message)| %>
+      <turbo-frame id="message_<%= i %>">
+        <h1><%= title %></h1>
+        <p><%= message %></p>
+        <a href="/messages/<%= i %>/edit">Edit this message</a>
+      </turbo-frame>
+    <% end %>
+  </div>
+</turbo-frame>
+
+<a href="/stream">Stream</a>
+
+<!-- <turbo-frame id="message_1">
+  <h1>My message title</h1>
+  <p>My message content</p>
+  <a href="/messages/1/edit">Edit this message</a>
+</turbo-frame> -->
+
+<div data-controller="hello" data-hello-number-value=4>
+  <%# <h1 data-target="hello.output"></h1> %>
+  <h1 data-hello-target='output'></h1>
+  <button data-action='hello#clicked'>CLICK ME</button>
+</div>
+
+
+<div data-controller="text-input">
+  <input type="text" data-action="text-input#changed" data-text-input-target="input">
+  <h1 data-text-input-target='output'></h1>
+</div>
+
+
+<div data-controller="styling"
+     data-styling-primary-class="btn-primary">
+  <button class='btn' data-styling-target='button' data-action='styling#clicked'>
+    CLICK ME
+  </button>
+</div>
+
+
+<div data-controller="styling"
+     data-styling-primary-class="btn-primary">
+  <button class='btn' data-styling-target='button' data-action='styling#clicked'>
+    CLICK ME
+  </button>
+  <button data-action="styling#clicked:once">CLICK ONCE</button>
+</div>

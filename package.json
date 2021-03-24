@@ -1,0 +1,18 @@
+{
+  "name": "crystal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "fd -d 3 -e cr -e ecr | entr -r crystal run server.cr",
+    "js:watch": "esbuild --bundle application.js --outdir=public --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hotwired/turbo": "^7.0.0-beta.4",
+    "esbuild": "^0.9.6",
+    "stimulus": "^2.0.0"
+  }
+}
