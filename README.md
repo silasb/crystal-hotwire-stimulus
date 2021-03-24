@@ -1,4 +1,4 @@
-# Crystal Hotwire / Stimuls Experiments
+# Crystal Hotwire (Turbo, Stimulus) Experiments
 
 ## Getting Started
 
